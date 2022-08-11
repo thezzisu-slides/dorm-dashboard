@@ -1,11 +1,11 @@
 {
-  "name": "template-board",
+  "name": "dorm-dashboard",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thezzisu-slides/template-board.git"
+    "url": "git+https://github.com/thezzisu-slides/dorm-dashboard.git"
   },
   "scripts": {
     "dev": "vite",

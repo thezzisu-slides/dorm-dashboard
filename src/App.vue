@@ -1,37 +1,15 @@
 <template>
   <q-layout view="hHh Lpr lff">
     <q-header elevated class="app-header">
-      <q-toolbar class="q-px-none">
-        <q-btn
-          stretch
-          flat
-          icon="mdi-menu"
-          text-color="black"
-          @click="nav = !nav"
-        />
-        <q-btn
-          stretch
-          flat
-          no-caps
-          no-wrap
-          text-color="black"
-          to="/"
-          class="app-logo"
-        >
+      <q-toolbar class="q-px-none text-black">
+        <q-btn stretch flat icon="mdi-menu" @click="nav = !nav" />
+        <q-btn stretch flat no-caps no-wrap to="/" class="app-logo">
           <img
             class="app-logo__text"
             src="https://slides.zisu.dev/svg/text.svg"
           />
         </q-btn>
-        <q-space />
-        <q-btn
-          stretch
-          flat
-          icon="mdi-github"
-          text-color="black"
-          target="_blank"
-          href="https://github.com/thezzisu/kpi/tree/dev/packages/frontpage"
-        />
+        <q-toolbar-title class="font-juliamo"> Env Dashboard </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
@@ -58,14 +36,24 @@
             </q-item-label>
           </q-item-section>
         </q-item>
+        <q-item href="https://slides.zisu.dev">
+          <q-item-section avatar>
+            <q-icon name="mdi-keyboard-return" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="text-subtitle1 font-juliamo">
+              Return to Slides
+            </q-item-label>
+          </q-item-section>
+        </q-item>
         <q-item v-for="(item, i) of menu" :key="i" :to="item.to" exact>
           <q-item-section avatar>
             <q-icon :name="item.icon" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="text-subtitle1 font-juliamo">{{
-              item.label
-            }}</q-item-label>
+            <q-item-label class="text-subtitle1 font-juliamo">
+              {{ item.label }}
+            </q-item-label>
           </q-item-section>
         </q-item>
       </q-list>
